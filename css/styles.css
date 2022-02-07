@@ -32,7 +32,7 @@ h2 {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 425px) {
   html {
     font-size: 100%;
   }
@@ -96,7 +96,7 @@ h2 {
   height: 40px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 425px) {
   .icon {
     width: 48px;
     height: 48px;
@@ -135,7 +135,8 @@ h2 {
 
 /* Summary */
 .summary {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem 1rem;
+  background-color: #fff;
 }
 
 .summary__header {
@@ -155,6 +156,16 @@ h2 {
   margin: 2rem 0 1rem;
 }
 
+@media screen and (min-width: 425px) {
+  .summary {
+    padding: 2rem 3rem;
+  }
+}
+
+.hero {
+  margin-bottom: -10px; /* fixes the issue with svg */
+}
+
 /* Hero */
 .hero__image {
   width: 100%;
@@ -168,4 +179,22 @@ h2 {
   max-width: 425px;
   margin: 0 auto;
   box-shadow: 0 0 12px 0 #dee6fd;
+}
+
+/* Container */
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: #e0e8fd;
+  background-image: url(/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    background-image: url(/images/pattern-background-desktop.svg);
+  }
 }
