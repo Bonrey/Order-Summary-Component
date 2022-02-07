@@ -200,11 +200,11 @@ h2 {
   }
 }
 
+/* Hero */
 .hero {
   margin-bottom: -10px; /* fixes the issue with svg */
 }
 
-/* Hero */
 .hero__image {
   width: 100%;
   height: auto;
