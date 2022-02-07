@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: #3829e0;
-  --color-primary-on-hover: #766cf1;
+  --color-primary-on-hover: #594afb;
   --color-headings: #1f2f56;
 }
 
@@ -10,6 +10,27 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Animation */
+@keyframes card-flip {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+
+  100% {
+    transform: rotateY(720deg) scale(1);
+  }
+}
+
+@-webkit-keyframes card-flip {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+
+  100% {
+    transform: rotateY(720deg) scale(1);
+  }
 }
 
 /* Typography */
@@ -77,13 +98,30 @@ h2 {
 }
 
 /* Link */
-.link:hover {
+.link {
   text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  height: 1px;
+  position: relative;
+  bottom: 4px;
+  transition: transform 0.2s;
+}
+
+.link:hover::after {
+  transform: scaleX(0);
 }
 
 .link--primary {
   color: var(--color-primary);
   transition: color 0.3s;
+}
+
+.link--primary::after {
+  background-color: var(--color-primary);
 }
 
 .link--primary:hover {
@@ -179,6 +217,8 @@ h2 {
   max-width: 425px;
   margin: 0 auto;
   box-shadow: 0 0 12px 0 #dee6fd;
+  animation: card-flip 1s ease-out;
+  -webkit-animation: card-flip 1s ease-out;
 }
 
 /* Container */
@@ -191,6 +231,7 @@ h2 {
   background-image: url(/images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+  perspective: 40rem;
 }
 
 @media screen and (min-width: 1024px) {
