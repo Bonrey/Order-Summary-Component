@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: hsl(245, 75%, 52%);
+  --color-primary-on-hover: #766cf1;
   --color-secondary: hsl(225, 100%, 94%);
   --color-headings: #535c75;
 }
@@ -44,7 +45,7 @@ body {
 }
 
 .btn--primary:hover {
-  background-color: #766cf1;
+  background-color: var(--color-primary-on-hover);
 }
 
 .btn--transparent {
@@ -55,4 +56,18 @@ body {
 
 .btn--transparent:hover {
   color: var(--color-headings);
+}
+
+/* Links */
+.link:hover {
+  text-decoration: none;
+}
+
+.link--primary {
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+.link--primary:hover {
+  color: var(--color-primary-on-hover);
 }
