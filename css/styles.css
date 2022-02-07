@@ -3,6 +3,7 @@
 :root {
   --color-primary: hsl(245, 75%, 52%);
   --color-secondary: hsl(225, 100%, 94%);
+  --color-headings: #535c75;
 }
 
 *,
@@ -11,6 +12,7 @@
   box-sizing: border-box;
 }
 
+/* Typography */
 html {
   font-size: 62.5%;
 }
@@ -18,4 +20,39 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #a6aabb;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 1.5rem 0;
+  font-weight: 700;
+  border: 0;
+  outline: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 10px 8px 0 #e2defc;
+  transition: background-color 0.3s;
+}
+
+.btn--primary:hover {
+  background-color: #766cf1;
+}
+
+.btn--transparent {
+  background-color: transparent;
+  color: #818699;
+  transition: color 0.3s;
+}
+
+.btn--transparent:hover {
+  color: var(--color-headings);
 }
