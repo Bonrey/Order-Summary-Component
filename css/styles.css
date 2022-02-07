@@ -36,6 +36,7 @@
 /* Typography */
 html {
   font-size: 80%;
+  height: 100%;
 }
 
 body {
@@ -43,6 +44,19 @@ body {
   font-weight: 500;
   line-height: 1.5;
   color: #7280a7;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #e0e8fd;
+  background-image: url(/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url(/images/pattern-background-desktop.svg);
+  }
 }
 
 h1 {
@@ -223,19 +237,27 @@ h2 {
 
 /* Container */
 .container {
-  min-height: 100vh;
   padding: 2rem;
   display: flex;
+  flex-grow: 1;
   align-items: center;
-  background-color: #e0e8fd;
-  background-image: url(/images/pattern-background-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
   perspective: 40rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .container {
-    background-image: url(/images/pattern-background-desktop.svg);
-  }
+/* Attribution */
+.attribution {
+  color: var(--color-headings);
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.attribution__link {
+  color: #818699;
+  transition: color 0.3s;
+}
+
+.attribution__link:hover {
+  color: var(--color-headings);
 }
